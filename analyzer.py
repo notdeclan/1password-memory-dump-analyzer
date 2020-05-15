@@ -37,8 +37,11 @@ if __name__ == '__main__':
     for a in re.findall(pattern, printable):
         url_a, email, url_b, user_id, rank = a
         print("Potential 1Password Credentials")
-        print("\tPotential URL: " + url_a)
-        print("\tPotential URL: " + url_b)
+
+        print("\tPotential Sign In URL: " + url_a)
+        if url_b not in url_a:
+            print("\tPotential Sign In URL: " + url_b)
+
         print("\tPotential Sign In Email: " + email)
         print("\tPotential User ID: " + user_id)
         print("\tPotential Subscription Rank: " + rank)
@@ -71,4 +74,4 @@ if __name__ == '__main__':
             potential_credentials.append(jsons)
 
     print("Found %s Potential Credentials" % len(potential_credentials))
-    print("finished dumping")
+    print("Finished")
