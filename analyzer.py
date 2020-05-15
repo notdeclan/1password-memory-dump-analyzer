@@ -34,8 +34,8 @@ if __name__ == '__main__':
     # Search for 1Password Credential Information
     pattern = re.compile(
         "\{\"title\":\".*\",\"url\":\"(.*)\",\"ainfo\":\"(.*)\",\"ps\":.*,\"pbe\":.*,\"pgrng\":.*,\"URLs\":\[\{\"l\":\".*\",\"u\":\"(.*)\"\}\],\"b5UserUUID\":\"(.*)\",\"tags\":\[(.*)]\}")
-    for a in re.findall(pattern, printable):
-        url_a, email, url_b, user_id, rank = a
+    for match in re.findall(pattern, printable):
+        url_a, email, url_b, user_id, rank = match
         print("Potential 1Password Credentials")
 
         print("\tPotential Sign In URL: " + url_a)
