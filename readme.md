@@ -1,5 +1,5 @@
 # 1Password Dump Analyzer
-Used to extract secret information from Mini Dump files of 1Password7
+Used to extract secret information from Mini Dump files of 1Password7 (Windows)
 
 ### Outputs
 1Password 
